@@ -8,8 +8,12 @@ function App() {
   return (
     <div>
       <Header/>
-      <Body />
-      <Footer />
+      <Body>
+        <h1>Welcome to My Portfolio</h1>
+        <h2>About Me</h2>
+         <p>Welcome to my portfolio! I am a passionate web developer.</p>
+      </Body>
+        <Footer />
     </div>
   )
 }

@@ -5,7 +5,6 @@ import MenuLink from '../MenuLink/MenuLink'
 function Header() {
   return (
     <div id="navbar">
-          <h1>My Portfolio</h1>
           
           <div>
               <MenuLink linkname="Home" url="#home"/>
