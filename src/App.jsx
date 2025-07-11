@@ -2,7 +2,9 @@
 import Body from "./Components/Body/Body"
 import Footer from "./Components/Footer/Footer"
 import Header from "./Components/Header/Header"
+import './index.css';
 import DownloadButton from "./Components/Buttons/DowloadButton/DownloadButton"
+import bg from './assets/images/bg.jpg';
 
 function App() {
 
@@ -10,7 +12,7 @@ function App() {
   return (
     <div>
       <Header />
-      
+      <img src={bg} className="bg" alt="background image" />
       {/* following is including props handling */}
       <Body>
         <h1>Welcome to My Portfolio</h1>
