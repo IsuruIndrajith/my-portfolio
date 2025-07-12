@@ -12,7 +12,9 @@ function App() {
   return (
     <div>
       <Header />
-      <img src={bg} className="bg" alt="background image" />
+      {/* <img src={bg} className="bg" alt="background image" /> */}
+      <div className="bg"></div>
+      
       {/* following is including props handling */}
       <Body>
         <h1>Welcome to My Portfolio</h1>

@@ -1,0 +1,44 @@
+.link {
+  color: #ffffff;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 12px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Hover effect */
+.link:hover {
+  color: #fffcf4; /* sky blue */
+}
+
+/* Optional underline on hover */
+.link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fffcf4;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+
+
+  .link {
+    font-size: 1.2rem; /* slightly larger font on smaller screens */
+  }
+}
+
+
+
+

@@ -7,7 +7,7 @@ function Header() {
   return (
     <div id="navbar">
           
-      <div>
+      <div className='nav-links'>
               <MenuLink linkname="Home" url="#home"/>
               <MenuLink linkname="About" url="#about"/>
               <MenuLink linkname="Projects" url="#projects" />
