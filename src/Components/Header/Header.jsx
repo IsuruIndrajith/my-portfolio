@@ -2,12 +2,12 @@ import React from 'react'
 import './Header.css'
 import MenuLink from '../MenuLink/MenuLink'
 
+
 function Header() {
   return (
     <div id="navbar">
-          <h1>My Portfolio</h1>
           
-          <div>
+      <div className='nav-links'>
               <MenuLink linkname="Home" url="#home"/>
               <MenuLink linkname="About" url="#about"/>
               <MenuLink linkname="Projects" url="#projects" />
@@ -15,8 +15,13 @@ function Header() {
               <MenuLink linkname="Education" url="#education" />
               <MenuLink linkname="Experience" url="#experience" />
               <MenuLink linkname="Contacts" url="#contacts" />
-          </div>
+      </div>
+
+      
     </div>
+    
+
+  
   )
 }
 
