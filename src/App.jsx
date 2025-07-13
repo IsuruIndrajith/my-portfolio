@@ -13,7 +13,11 @@ function App() {
     <div>
       <Header />
       {/* <img src={bg} className="bg" alt="background image" /> */}
-      <div className="bg"></div>
+      
+        <div className="home-page-container">
+          <div className="bg">
+        </div>
+      </div>
       
       {/* following is including props handling */}
     

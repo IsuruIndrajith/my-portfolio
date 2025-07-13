@@ -3,10 +3,10 @@ import DownloadButton from "../../Components/Buttons/DowloadButton/DownloadButto
 import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
 import Body from "../../Components/Body/Body";
-import "./Projects.css";
+import "./Experience.css";
 
 
-function ProjectPage() {
+function ExperiencePage() {
 
 
   return (
@@ -24,4 +24,4 @@ function ProjectPage() {
   )
 }
 
-export default ProjectPage
+export default ExperiencePage
