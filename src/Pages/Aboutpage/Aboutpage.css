@@ -1,7 +1,7 @@
 /* AboutPage Container Animation */
 .about-page-container {
   animation: fadeSlideIn 0.8s ease-out both;
-  padding: 40px 60px;
+  padding: 20px 20px;
   background-color: #f7f7f7;
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

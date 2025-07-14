@@ -3,7 +3,8 @@ import Body from "./Components/Body/Body"
 import Footer from "./Components/Footer/Footer"
 import Header from "./Components/Header/Header"
 import './index.css';
-import DownloadButton from "./Components/Buttons/DowloadButton/DownloadButton"
+import DownloadButton from "./Components/Buttons/DowloadButton/DownloadButton";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {

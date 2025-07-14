@@ -12,7 +12,7 @@ function SkillsPage() {
   return (
       <div>
            <Header />
-    <div className="about-page-container">
+    <div className="skills-page-container">
        
       <Body>
       </Body>
