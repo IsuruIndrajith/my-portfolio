@@ -3,7 +3,7 @@ export const educationData = [
     degree: "BSc (Hons) in Computer Engineering",
     institution: "University of Jaffna",
     year: "2022 - 2026",
-    details: "GPA: 3.05"
+    details: "GPA: 3.07"
   },
   {
     degree: "Advanced Level – Physical Science Stream",

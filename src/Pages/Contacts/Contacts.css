@@ -1,0 +1,62 @@
+.connect-page {
+  padding: 3rem 2rem;
+  min-height: 100vh;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.connect-page h1 {
+  font-size: 2.5rem;
+  color: #efd867;
+  margin-bottom: 1rem;
+}
+
+.connect-page p {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-links a {
+  color: #ffd700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s;
+}
+
+.contact-links a:hover {
+  color: #fff;
+}
+
+.download-resume {
+  margin-top: 2rem;
+}
+
+.download-resume a {
+  color: #333;
+  background-color: #efd867;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.download-resume a:hover {
+  background-color: #ffda44;
+  color: #1f1f1f;
+}
