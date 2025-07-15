@@ -1,6 +1,9 @@
 #footer{
   min-height: 5vh;
-  background-color: #f1f1f1;
+  background-color: #1e1b1b;
   text-align: center;
   padding: 20px;
+  position: sticky;
+  bottom: 0;
+  color: antiquewhite;
 }

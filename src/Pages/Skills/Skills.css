@@ -1,0 +1,126 @@
+/* AboutPage Container Animation */
+.skills-page-container {
+  animation: fadeSlideIn 0.8s ease-out both;
+  padding: 20px 20px;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  margin: 0.5rem 0.5rem;
+  width: 100%;;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e1b1b;
+  position: relative;
+}
+
+.skills-page-container h5 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #1e1b1b;
+  transition: color 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.skill-content{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.skills{
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  max-width: auto;
+  flex: 1;
+
+}
+
+.skills-info {
+  flex: auto;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Animation Keyframes */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading Styles */
+.skills-page-container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #1e1b1b;
+  transition: color 0.3s ease;
+}
+
+.skills-page-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.skills-page-container button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .skills-page-container {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .skill-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills, .skills-info {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+  }
+  .skills::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for clean mobile look */
+  }
+
+  .skills-card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    min-width: 140px;
+  }
+
+  .skills-page-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .skills-page-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .skills-page-container p {
+    font-size: 1rem;
+  }
+}

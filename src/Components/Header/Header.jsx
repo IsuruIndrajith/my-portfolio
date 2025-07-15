@@ -8,13 +8,13 @@ function Header() {
     <div id="navbar">
           
       <div className='nav-links'>
-              <MenuLink linkname="Home" url="#home"/>
-              <MenuLink linkname="About" url="#about"/>
-              <MenuLink linkname="Projects" url="#projects" />
-              <MenuLink linkname="Skills & Achievements" url="#skills" />
-              <MenuLink linkname="Education" url="#education" />
-              <MenuLink linkname="Experience" url="#experience" />
-              <MenuLink linkname="Contacts" url="#contacts" />
+              <MenuLink linkname="Home" url="/" />
+              <MenuLink linkname="About" url="/about"/>
+              <MenuLink linkname="Projects" url="/projects" />
+              <MenuLink linkname="Skills & Achievements" url="/skills" />
+              <MenuLink linkname="Education" url="/education" />
+              <MenuLink linkname="Experience" url="/experience" />
+              <MenuLink linkname="Contacts" url="/contacts" />
       </div>
 
       
