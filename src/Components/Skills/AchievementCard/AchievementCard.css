@@ -1,0 +1,36 @@
+.achievement-card {
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.achievement-card h4 {
+  font-size: 1.2rem;
+  color: #efd867;
+}
+
+.achievement-card a {
+  color: #ffd700;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.achievement-card a:hover {
+  text-decoration: underline;
+}

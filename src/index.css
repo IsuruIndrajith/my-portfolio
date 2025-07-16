@@ -5,7 +5,7 @@
   color: red;
 }
 
-.bg {
+/* .bg {
   background-image: url("./assets/images/bg.jpg");
   background-size: cover;
   background-position: center;
@@ -15,7 +15,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  aspect-ratio: 16 / 9;
+} */
+
+.bg-img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
+
 
 .home-page-container {
   animation: fadeSlideIn 0.8s ease-out both;
@@ -38,3 +46,22 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 768px) {
+  
+  .bg {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000; /* fallback if image doesn't cover full height */
+  }
+
+  .home-page-container {
+    width: 100%;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+ 
+}
+

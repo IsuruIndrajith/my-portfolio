@@ -1,0 +1,29 @@
+/* AboutPage Container Animation */
+.exp-page-container {
+  animation: fadeSlideIn 0.8s ease-out both;
+  padding: 20px 20px;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e1b1b;
+}
+
+/* Animation Keyframes */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading Styles */
+.exp-page-container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #1e1b1b;
+  transition: color 0.3s ease;
+}

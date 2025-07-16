@@ -4,6 +4,8 @@ import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
 import Body from "../../Components/Body/Body";
 import "./Experience.css";
+import { experienceData } from "../../data/experience";
+import ExperienceCard from "../../Components/ExperienceCard/ExperienceCard";
 
 
 function ExperiencePage() {
@@ -12,9 +14,23 @@ function ExperiencePage() {
   return (
       <div>
            <Header />
-    <div className="about-page-container">
+      <div className="exp-page-container">
        
-      <Body>
+        <Body>
+           <h1>Experience</h1>
+          {experienceData.map((item, index) => (
+            <ExperienceCard
+              key={index}
+              position={item.position}
+              organization={item.organization}
+              time={item.time}
+              iconUrl={item.iconUrl}
+              section={item.section}
+              details={ item.details}
+            
+            />
+          )) }
+
       </Body>
         
           </div>

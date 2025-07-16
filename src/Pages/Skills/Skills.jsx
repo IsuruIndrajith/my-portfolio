@@ -8,6 +8,8 @@ import { skillsData } from "../../data/skillData";
 import SkillCard from "../../Components/Skills/SkillCard/SkillCard";
 import { useState } from "react";
 import SkillsInfoCard from "../../Components/Skills/SkillsinfoCard/SkillsInfoCard";
+import AchievementCard from "../../Components/Skills/AchievementCard/AchievementCard";
+import { achievements } from "../../data/achievementData";
 
 const SkillsPage = () => {
 
@@ -45,6 +47,23 @@ const SkillsPage = () => {
           
               
           </div>
+
+          <h5>Achievements</h5>
+
+          <div className="achievements-container">
+  {achievements.map((item, index) => (
+    <AchievementCard
+      key={index}
+      title={item.title}
+      image={item.image}
+      description={item.description}
+      link={item.link}
+    />
+  ))}
+</div>
+
+
+          
 
 
         </Body>

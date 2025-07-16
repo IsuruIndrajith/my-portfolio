@@ -15,8 +15,11 @@ function App() {
       <Header />
       {/* <img src={bg} className="bg" alt="background image" /> */}
       
+      <div class="bg-wrapper">
+        <img src="src\assets\images\bg.jpg" alt="Background" class="bg-img" />
+        
         <div className="home-page-container">
-          <div className="bg">
+          
         </div>
       </div>
       
@@ -24,7 +27,7 @@ function App() {
     
 
         <Footer />
-    </div>
+       </div>
   )
 }
 

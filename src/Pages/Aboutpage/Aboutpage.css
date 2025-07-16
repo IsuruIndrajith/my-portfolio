@@ -39,7 +39,10 @@
   font-size: 1.1rem;
   line-height: 1.6;
   color: #444;
-  max-width: 700px;
+  max-width: 600px; /* Reasonable width for paragraphs */
+  margin: 0 auto;    /* Center horizontally */
+  text-align: center; /* Center text */
+  padding: 0 1rem;   /* Padding for small screens */
 }
 
 /* Download Button */
@@ -53,6 +56,13 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-page-container button:hover {
@@ -78,5 +88,7 @@
 
   .about-page-container p {
     font-size: 1rem;
+    line-height: 1.5;
+    padding: 0 1.5rem;
   }
 }
