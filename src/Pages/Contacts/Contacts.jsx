@@ -13,7 +13,7 @@ function ContactsPage() {
   return (
       <div>
            <Header />
-    <div className="about-page-container">
+    <div className="connect-page-container">
        
         <Body>
           

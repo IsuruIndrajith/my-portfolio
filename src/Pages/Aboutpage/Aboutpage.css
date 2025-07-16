@@ -1,11 +1,16 @@
 /* AboutPage Container Animation */
 .about-page-container {
   animation: fadeSlideIn 0.8s ease-out both;
+  transition: background-color 0.3s ease, padding 0.3s ease;
   padding: 20px 20px;
   background-color: #f7f7f7;
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #1e1b1b;
+}
+
+.about-page-container:hover {
+  background-color: #f0f0f0;
 }
 
 /* Animation Keyframes */
