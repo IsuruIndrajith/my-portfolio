@@ -32,8 +32,9 @@
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     align-items: center;
+    font-size: 0.8rem;
   }
 
   #navbar {
