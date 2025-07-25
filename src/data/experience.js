@@ -1,5 +1,5 @@
 export const experienceData = [
-    {   iconUrl: "src/assets/exp-images/comsoc.jpeg",
+    {   iconUrl: "/exp-images/comsoc.jpeg",
         position:"Committee Member",
         organization: "IEEE ComSoc Student Branch Chapter of UoJ",
         time: "Oct 2024 - Present",
@@ -9,7 +9,7 @@ export const experienceData = [
     },
 
     {
-        iconUrl: "src/assets/exp-images/saanaka.jpeg",
+        iconUrl: "/exp-images/saanaka.jpeg",
         position:"Committee Member",
         organization: "Sasnaka Sansada Foundation",
         time: "Dec 2021 - Present",
@@ -19,7 +19,7 @@ export const experienceData = [
     },
     
     {
-        iconUrl: "src/assets/exp-images/ieee.jpg",
+        iconUrl: "/exp-images/ieee.jpg",
         position:"Committee Member",
         organization: "IEEE",
         time: "Apr 2024 - Present",
@@ -28,7 +28,7 @@ export const experienceData = [
         
     },
     {
-        iconUrl: "src/assets/exp-images/iesl.webp",
+        iconUrl: "/exp-images/iesl.webp",
         position:"Committee Member",
         organization: "IESL Student Chapter - University of Jaffna",
         time: "Jan 2023 - Present",

@@ -16,7 +16,7 @@ function App() {
       {/* <img src={bg} className="bg" alt="background image" /> */}
         <div className="home-page-container">
         <div class="bg-wrapper">
-        <img src="src\assets\images\bg.jpg" alt="Background" class="bg-img" />
+        <img src="\images\bg.jpg" alt="Background" class="bg-img" />
         
       
           
