@@ -50,6 +50,7 @@ function App() {
   useEffect(() => {
     const observerOptions = {
       root: null,
+
       rootMargin: '-10% 0px -85% 0px', // Adjust to favor the top of sections
       threshold: [0.1, 0.5, 0.8]
     };
