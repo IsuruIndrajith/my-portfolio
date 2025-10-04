@@ -2,12 +2,112 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/success.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>© 2025 Isuru Indrajith</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Isuru Indrajith - Computer Engineer & Full Stack Developer</title>
+    <meta name="description" content="Computer Engineer and Full Stack Developer specializing in React, Node.js, Spring Boot, and DevOps. Building innovative solutions with modern technologies." />
+    <meta name="keywords" content="Isuru Indrajith, Computer Engineer, Full Stack Developer, React, Node.js, Spring Boot, DevOps, Web Development, Software Engineer, Portfolio" />
+    <meta name="author" content="Isuru Indrajith Edirisinghe" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Isuru Indrajith - Computer Engineer & Full Stack Developer" />
+    <meta property="og:description" content="Computer Engineer and Full Stack Developer specializing in React, Node.js, Spring Boot, and DevOps. Building innovative solutions with modern technologies." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://isuruindrajith.dev" />
+    <meta property="og:image" content="/assets/og-image.png" />
+    <meta property="og:site_name" content="Isuru Indrajith Portfolio" />
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Isuru Indrajith - Computer Engineer & Full Stack Developer" />
+    <meta name="twitter:description" content="Computer Engineer and Full Stack Developer specializing in React, Node.js, Spring Boot, and DevOps." />
+    <meta name="twitter:image" content="/assets/og-image.png" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#6366f1" />
+    <meta name="msapplication-TileColor" content="#6366f1" />
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://isuruindrajith.dev" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Isuru Indrajith Edirisinghe",
+      "jobTitle": "Computer Engineer & Full Stack Developer",
+      "description": "Computer Engineer and Full Stack Developer specializing in React, Node.js, Spring Boot, and DevOps.",
+      "url": "https://isuruindrajith.dev",
+      "sameAs": [
+        "https://github.com/IsuruIndrajith",
+        "https://www.linkedin.com/in/isuru-indrajith-387ab7278/"
+      ],
+      "knowsAbout": [
+        "React.js",
+        "Node.js",
+        "Spring Boot",
+        "JavaScript",
+        "Java",
+        "DevOps",
+        "Docker",
+        "Jenkins",
+        "AWS"
+      ],
+      "email": "isuruindrajith680@gmail.com",
+      "nationality": "Sri Lankan"
+    }
+    </script>
   </head>
   <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #ffffff; display: flex; align-items: center; justify-content: center; z-index: 9999;">
+      <div style="text-align: center;">
+        <div style="width: 40px; height: 40px; border: 3px solid #e2e8f0; border-top: 3px solid #6366f1; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 1rem;"></div>
+        <p style="color: #64748b; margin: 0; font-family: system-ui, -apple-system, sans-serif;">Loading Portfolio...</p>
+      </div>
+    </div>
+    
     <div id="root"></div>
+    
+    <!-- Module Script -->
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Hide loading screen when app loads -->
+    <script>
+      window.addEventListener('load', function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+          setTimeout(() => {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+              loadingScreen.remove();
+            }, 500);
+          }, 1000);
+        }
+      });
+      
+      // Add spin animation for loading
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      `;
+      document.head.appendChild(style);
+    </script>
   </body>
 </html>

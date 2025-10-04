@@ -1,0 +1,338 @@
+/* Education Section - Modern 2025 Design */
+.education-section {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  position: relative;
+}
+
+.education-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.education-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Education Timeline */
+.education-timeline {
+  max-width: 800px;
+  margin: 0 auto var(--space-3xl);
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: var(--space-2xl);
+  position: relative;
+  transition: all var(--transition-medium);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline Connector */
+.timeline-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: var(--space-xl);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.timeline-dot {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: var(--shadow-md);
+  border: 4px solid var(--bg-primary);
+  z-index: 2;
+}
+
+.timeline-line {
+  width: 3px;
+  height: 100px;
+  background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary));
+  margin-top: var(--space-md);
+  border-radius: var(--radius-sm);
+  opacity: 0.6;
+}
+
+/* Education Card */
+.education-card {
+  flex: 1;
+  padding: var(--space-xl);
+  margin-left: var(--space-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary));
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+}
+
+.timeline-item:hover .education-card::before {
+  opacity: 1;
+}
+
+/* Education Header */
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-lg);
+}
+
+.education-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  color: var(--accent-primary);
+}
+
+.education-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-xs);
+}
+
+.education-year {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: var(--bg-secondary);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-md);
+}
+
+/* Education Content */
+.education-degree {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  line-height: 1.4;
+}
+
+.education-institution,
+.education-details {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-sm);
+}
+
+.education-institution {
+  font-weight: 500;
+}
+
+.education-details {
+  color: var(--accent-success);
+  font-weight: 500;
+}
+
+/* Education Progress */
+.education-progress {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-light);
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.progress-label span:first-child {
+  color: var(--text-secondary);
+}
+
+.progress-label span:last-child {
+  color: var(--accent-primary);
+}
+
+/* Education Summary */
+.education-summary {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-2xl);
+  box-shadow: var(--glass-shadow);
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-xl);
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.summary-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-xl);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  flex-shrink: 0;
+}
+
+.icon-accent {
+  color: var(--accent-primary);
+}
+
+.summary-content h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.summary-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .timeline-connector {
+    flex-direction: row;
+    margin-right: 0;
+    margin-bottom: var(--space-lg);
+  }
+  
+  .timeline-line {
+    width: 100px;
+    height: 3px;
+    margin-top: 0;
+    margin-left: var(--space-md);
+  }
+  
+  .timeline-item:last-child .timeline-line {
+    display: none;
+  }
+  
+  .education-card {
+    margin-left: 0;
+    padding: var(--space-lg);
+  }
+  
+  .education-header {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .education-meta {
+    align-items: flex-start;
+  }
+  
+  .summary-item {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-connector {
+    margin-bottom: var(--space-md);
+  }
+  
+  .timeline-dot {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .education-degree {
+    font-size: 1.2rem;
+  }
+  
+  .education-card {
+    padding: var(--space-md);
+  }
+  
+  .education-summary {
+    padding: var(--space-xl);
+  }
+  
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
