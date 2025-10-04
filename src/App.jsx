@@ -50,13 +50,13 @@ function App() {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: '-10% 0px -10% 0px',
-      threshold: 0.3
+      rootMargin: '-20% 0px -60% 0px',
+      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5]
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
           const sectionId = entry.target.id;
           setActiveSection(sectionId);
         }
@@ -73,8 +73,9 @@ function App() {
       });
     };
 
-    // Observe after a short delay to ensure all sections are rendered
-    const timeoutId = setTimeout(observeSections, 1000);
+    // Observe immediately and after a short delay
+    observeSections();
+    const timeoutId = setTimeout(observeSections, 500);
 
     return () => {
       observer.disconnect();
