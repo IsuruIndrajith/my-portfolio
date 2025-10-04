@@ -67,7 +67,7 @@ const projects = [
     links: [
       {
         label: "Git Hub repo",
-        url: "https://github.com/Dinith132/Automated-Examination-System",
+        url: "https://github.com/IsuruIndrajith/Automated-Examination-System",
       }
     ]
   },

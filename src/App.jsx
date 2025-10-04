@@ -50,36 +50,28 @@ function App() {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: '-10% 0px -10% 0px',
-      threshold: 0.3
+      rootMargin: '-10% 0px -85% 0px', // Adjust to favor the top of sections
+      threshold: [0.1, 0.5, 0.8]
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
           const sectionId = entry.target.id;
-          setActiveSection(sectionId);
+          if (sectionId) {
+            setActiveSection(sectionId);
+            // Update URL hash without scrolling
+            window.history.replaceState(null, null, `#${sectionId}`);
+          }
         }
       });
     }, observerOptions);
 
-    // Wait for DOM to be ready
-    const observeSections = () => {
-      const sections = document.querySelectorAll('section[id]');
-      sections.forEach(section => {
-        if (section.id) {
-          observer.observe(section);
-        }
-      });
-    };
+    // Immediate observation of sections
+    const sections = document.querySelectorAll('section[id]');
+    sections.forEach(section => observer.observe(section));
 
-    // Observe after a short delay to ensure all sections are rendered
-    const timeoutId = setTimeout(observeSections, 1000);
-
-    return () => {
-      observer.disconnect();
-      clearTimeout(timeoutId);
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -88,9 +80,10 @@ function App() {
         darkMode={darkMode} 
         toggleDarkMode={toggleDarkMode} 
         activeSection={activeSection}
+        setActiveSection={setActiveSection}
       />
       
-      <main>
+      <main style={{ marginTop: '70px' }}>
         <HeroSection />
         <AboutSection />
         <SkillsSection />

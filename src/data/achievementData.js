@@ -15,13 +15,13 @@ export const achievements = [
     title: " Postman API Fundamentals Student Expert ",
     image: "/Achievements/Postman - Postman API Fundamentals Student Expert - 2024-11-19 (2).png",
     description: " API development and testing, Authentication.",
-    link: "https://www.linkedin.com/posts/isuru-indrajith-387ab7278_postman-api-fundamentals-student-expert-activity-7264553260051492864-31mm?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPLZFcBxoOtvs0Swhj_u3qmdix5634CbYY"
+    link: "https://badgr.com/public/assertions/9NCsj9yGSluJVCXNqFI7rQ?identity__email=isuruindrajith680@gmail.com"
     },
   {
     title: " Kaggle, Intro to Machine Learning.",
     image: "/Achievements/kaggle.png",
     description: " Machine Learning basics.",
-    link: "https://www.linkedin.com/posts/isuru-indrajith-387ab7278_postman-api-fundamentals-student-expert-activity-7264553260051492864-31mm?utm_source=share&utm_medium=member_desktop&rcm=https://www.linkedin.com/posts/activity-7159076783584079873-ewNz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPLZFcBxoOtvs0Swhj_u3qmdix5634CbYYACoAAEPLZFcBxoOtvs0Swhj_u3qmdix5634CbYY"
+    link: "https://www.kaggle.com/learn/certification/isuruindrajith/intro-to-machine-learning"
     },
   {
     title: "Microsoft Azure Fundamentals",

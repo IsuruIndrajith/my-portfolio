@@ -33,7 +33,7 @@ const Footer = () => {
     },
     {
       icon: <Twitter size={20} />,
-      href: '#',
+      href: 'https://x.com/IsuruIndrajith_',
       label: 'Twitter'
     }
   ];
