@@ -47,25 +47,25 @@ const ContactSection = () => {
 
   const socialLinks = [
     {
-      icon: <Github size={20} />,
+      icon: <Github size={24} />,
       name: 'GitHub',
       href: 'https://github.com/IsuruIndrajith',
       color: '#333'
     },
     {
-      icon: <Linkedin size={20} />,
+      icon: <Linkedin size={24} />,
       name: 'LinkedIn',
       href: 'https://www.linkedin.com/in/isuru-indrajith-387ab7278/',
       color: '#0077b5'
     },
     {
-      icon: <Twitter size={20} />,
+      icon: <Twitter size={24} />,
       name: 'Twitter',
-      href: '#',
+      href: 'https://x.com/IsuruIndrajith_',
       color: '#1da1f2'
     },
     {
-      icon: <Mail size={20} />,
+      icon: <Mail size={24} />,
       name: 'Email',
       href: 'mailto:isuruindrajith680@gmail.com',
       color: '#ea4335'

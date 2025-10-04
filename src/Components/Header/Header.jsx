@@ -3,18 +3,14 @@ import { motion } from 'framer-motion';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import './Header.css';
 
-function Header({ darkMode, toggleDarkMode, activeSection }) {
+function Header({ darkMode, toggleDarkMode, activeSection, setActiveSection }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  
 
-
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -33,10 +29,7 @@ function Header({ darkMode, toggleDarkMode, activeSection }) {
   const scrollToSection = (href) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     setIsMenuOpen(false);
   };
@@ -50,11 +43,7 @@ function Header({ darkMode, toggleDarkMode, activeSection }) {
     >
       <nav className="nav container">
         {/* Logo */}
-        <motion.div 
-          className="nav-brand"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
+        <motion.div className="nav-brand" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <span className="gradient-text">Isuru Indrajith</span>
         </motion.div>
 
@@ -65,12 +54,11 @@ function Header({ darkMode, toggleDarkMode, activeSection }) {
               <li key={item.name}>
                 <motion.a
                   href={item.href}
-                  className={`nav-link ${
-                    activeSection === item.href.slice(1) ? 'nav-link-active' : ''
-                  }`}
+                  className={`nav-link ${activeSection === item.href.slice(1) ? 'nav-link-active' : ''}`}
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection(item.href);
+                    setActiveSection(item.href.slice(1));
                   }}
                   whileHover={{ y: -2 }}
                   whileTap={{ y: 0 }}
@@ -80,7 +68,6 @@ function Header({ darkMode, toggleDarkMode, activeSection }) {
               </li>
             ))}
           </ul>
-
           {/* Dark Mode Toggle */}
           <motion.button
             className="theme-toggle"
@@ -104,7 +91,6 @@ function Header({ darkMode, toggleDarkMode, activeSection }) {
           >
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </motion.button>
-
           {/* Hamburger Menu Button */}
           <motion.button
             className="hamburger"
@@ -115,7 +101,6 @@ function Header({ darkMode, toggleDarkMode, activeSection }) {
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.button>
         </div>
-
         {/* Mobile Menu Overlay */}
         {isMenuOpen && (
           <motion.div
@@ -126,7 +111,6 @@ function Header({ darkMode, toggleDarkMode, activeSection }) {
             onClick={() => setIsMenuOpen(false)}
           />
         )}
-
         {/* Mobile Menu */}
         <motion.div
           className={`mobile-menu ${isMenuOpen ? 'mobile-menu-open' : ''}`}
@@ -139,23 +123,16 @@ function Header({ darkMode, toggleDarkMode, activeSection }) {
               <motion.li
                 key={item.name}
                 initial={{ x: 50, opacity: 0 }}
-                animate={{ 
-                  x: isMenuOpen ? 0 : 50, 
-                  opacity: isMenuOpen ? 1 : 0 
-                }}
-                transition={{ 
-                  delay: isMenuOpen ? index * 0.1 : 0,
-                  duration: 0.3 
-                }}
+                animate={{ x: isMenuOpen ? 0 : 50, opacity: isMenuOpen ? 1 : 0 }}
+                transition={{ delay: isMenuOpen ? index * 0.1 : 0, duration: 0.3 }}
               >
                 <a
                   href={item.href}
-                  className={`mobile-nav-link ${
-                    activeSection === item.href.slice(1) ? 'mobile-nav-link-active' : ''
-                  }`}
+                  className={`mobile-nav-link ${activeSection === item.href.slice(1) ? 'mobile-nav-link-active' : ''}`}
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection(item.href);
+                    setActiveSection(item.href.slice(1));
                   }}
                 >
                   {item.name}

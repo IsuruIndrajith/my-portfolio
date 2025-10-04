@@ -13,6 +13,7 @@ import {
 import './SkillsSection.css';
 
 const SkillsSection = () => {
+  console.log('SkillsSection rendering');
 
   const skillCategories = {
     frontend: {
@@ -24,8 +25,7 @@ const SkillsSection = () => {
         { name: 'JavaScript (ES6+)', level: 88, experience: '2+ years' },
         { name: 'TypeScript', level: 75, experience: '1+ year' },
         { name: 'HTML5 & CSS3', level: 95, experience: '3+ years' },
-        { name: 'Tailwind CSS', level: 90, experience: '1.5+ years' },
-        { name: 'Framer Motion', level: 80, experience: '1+ year' }
+        { name: 'Tailwind CSS', level: 90, experience: '1.5+ years' }
       ]
     },
     backend: {
@@ -37,7 +37,7 @@ const SkillsSection = () => {
         { name: 'Spring Boot', level: 80, experience: '1.5+ years' },
         { name: 'Java', level: 82, experience: '2+ years' },
         { name: 'RESTful APIs', level: 90, experience: '2+ years' },
-        { name: 'GraphQL', level: 65, experience: '6+ months' }
+  
       ]
     },
     database: {
@@ -69,7 +69,7 @@ const SkillsSection = () => {
       skills: [
         { name: 'React Native', level: 85, experience: '1.5+ years' },
         { name: 'Expo', level: 88, experience: '1.5+ years' },
-        { name: 'Android Studio', level: 70, experience: '1+ year' },
+        { name: 'Flutter', level: 70, experience: '1+ year' },
         { name: 'Mobile UI/UX', level: 80, experience: '1+ year' }
       ]
     },
@@ -91,6 +91,8 @@ const SkillsSection = () => {
     visible: {
       opacity: 1,
       transition: {
+        duration: 0.5,
+        when: "beforeChildren",
         staggerChildren: 0.1
       }
     }
@@ -102,8 +104,9 @@ const SkillsSection = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
-        ease: 'easeOut'
+        type: "spring",
+        damping: 12,
+        stiffness: 100
       }
     }
   };
@@ -122,12 +125,12 @@ const SkillsSection = () => {
 
   return (
     <section id="skills" className="skills-section section">
-      <div className="container">
+      <div className="container" style={{ padding: '0 2rem' }}>
         <motion.div
           className="skills-content"
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          animate="visible"
+          viewport={{ once: true, amount: 0.1 }}
           variants={containerVariants}
         >
           {/* Section Header */}
@@ -146,9 +149,9 @@ const SkillsSection = () => {
               <motion.div
                 key={categoryKey}
                 className="skills-category"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
                 transition={{ duration: 0.4, delay: categoryIndex * 0.05 }}
               >
                 <div className="category-header">
@@ -170,9 +173,9 @@ const SkillsSection = () => {
                     <motion.div
                       key={skill.name}
                       className="skill-item card"
-                      initial={{ opacity: 0, y: 15 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, amount: 0.3 }}
+                      variants={itemVariants}
+                      initial="hidden"
+                      animate="visible"
                       transition={{ 
                         duration: 0.3, 
                         delay: index * 0.03 
